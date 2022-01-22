@@ -27,6 +27,13 @@ module.exports = {
   getStudents(req, res) {
     Student.find()
       .then(async (students) => {
+        // console.log(students);
+        // let plusStudents = students.map( async (i) => {
+        //   console.log(i._id);
+        //   let thisGrade = await grade(i._id);
+        //   i.push(thisGrade)
+        //   return i
+        // });
         const studentObj = {
           students,
           headCount: await headCount(),
